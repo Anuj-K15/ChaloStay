@@ -13,7 +13,6 @@ import Heading from "../Heading";
 import Input from "../inputs/Input";
 import { toast } from "react-hot-toast";
 import Button from "../Button";
-import LoginModal from "./LoginModal";
 import { signIn } from "next-auth/react";
 
 const RegisterModal = () => {
@@ -43,7 +42,7 @@ const RegisterModal = () => {
         registerModal.onClose();
         loginModal.onOpen();
       })
-      .catch((error) => {
+      .catch(() => {
         toast.error("Something went wrong");
       })
       .finally(() => {

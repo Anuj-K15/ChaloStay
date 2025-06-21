@@ -11,8 +11,6 @@ import useRentModal from "@/app/hooks/useRentModal";
 
 import { signOut } from "next-auth/react";
 import { SafeUser } from "@/app/types";
-import { on } from "events";
-import { Router } from "next/router";
 import { useRouter } from "next/navigation";
 
 interface UserMenuProps {

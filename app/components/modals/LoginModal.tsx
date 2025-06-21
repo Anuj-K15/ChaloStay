@@ -1,6 +1,5 @@
 "use client";
 
-import axios from "axios";
 import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { useCallback, useState } from "react";
@@ -14,7 +13,6 @@ import Input from "../inputs/Input";
 import { toast } from "react-hot-toast";
 import Button from "../Button";
 import { useRouter } from "next/navigation";
-import RegisterModal from "./RegisterModal";
 
 const LoginModal = () => {
   const router = useRouter();

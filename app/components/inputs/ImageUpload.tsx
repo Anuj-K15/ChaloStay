@@ -6,7 +6,9 @@ import { useCallback } from "react";
 import { TbPhotoPlus } from "react-icons/tb";
 
 declare global {
-  var cloudinary: any;
+  var cloudinary: {
+    openUploadWidget: (options: Record<string, unknown>, callback: (result: unknown) => void) => void;
+  };
 }
 
 interface ImageUploadProps {
@@ -16,7 +18,7 @@ interface ImageUploadProps {
 
 const ImageUpload: React.FC<ImageUploadProps> = ({ onChange, value }) => {
   const handleUpload = useCallback(
-    (result: any) => {
+    (result: { info: { secure_url: string } }) => {
       onChange(result.info.secure_url);
     },
     [onChange]

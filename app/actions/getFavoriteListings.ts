@@ -1,4 +1,3 @@
-
 import prisma from "@/app/libs/prismadb";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 
@@ -25,7 +24,7 @@ export default async function getFavoriteListings() {
         }))
         
         return safeFavorites;
-    } catch (error: any) {
-        throw new Error(error);
+    } catch (error: unknown) {
+        throw new Error(error instanceof Error ? error.message : 'Unknown error');
     } 
 }

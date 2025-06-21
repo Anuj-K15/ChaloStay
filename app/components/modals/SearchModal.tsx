@@ -63,12 +63,12 @@ const SearchModal = () => {
       currentQuery = qs.parse(params.toString());
     }
 
-    const updatedQuery: Record<string, unknown> = {
+    const updatedQuery: Record<string, string | string[] | undefined> = {
       ...currentQuery,
       locationValue: location?.value,
-      guestCount,
-      roomCount,
-      bathroomCount,
+      guestCount: guestCount.toString(),
+      roomCount: roomCount.toString(),
+      bathroomCount: bathroomCount.toString(),
     };
 
     if (dateRange.startDate) {

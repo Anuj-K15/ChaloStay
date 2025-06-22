@@ -55,14 +55,14 @@ const Search = () => {
       className="border-[1px] w-full md:w-auto py-2 rounded-full shadow-sm hover:shadow-md transition cursor-pointer"
     >
       <div className="flex flex-row items-center justify-between">
-        <div className="text-sm font-semibold px-6">{locationLabel}</div>
+        <div className="text-xs sm:text-sm font-semibold px-2 sm:px-6 truncate">{locationLabel}</div>
         <div className="hidden sm:block text-sm font-semibold px-6 border-x-[1px] flex-1 text-center">
           {durationLabel}
         </div>
-        <div className="text-sm pl-6 pr-2 text-gray-600 flex flex-row items-center gap-3">
+        <div className="text-xs sm:text-sm pl-2 sm:pl-6 pr-2 text-gray-600 flex flex-row items-center gap-1 sm:gap-3">
           <div className="hidden sm:block">{guestLabel}</div>
-          <div className="p-2 bg-rose-500 rounded-full text-white">
-            <BiSearch size={18} />
+          <div className="p-1 sm:p-2 bg-rose-500 rounded-full text-white">
+            <BiSearch size={16} className="sm:w-[18px] sm:h-[18px]" />
           </div>
         </div>
       </div>

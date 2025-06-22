@@ -27,18 +27,18 @@ const CountrySelect: React.FC<CountrySelectProps> = ({ value, onChange }) => {
         value={value}
         onChange={(value) => onChange(value as CountrySelectValue)}
         formatOptionLabel={(option: CountrySelectValue) => (
-          <div className="flex flex-row items-center gap-3">
-            <div>{option.flag}</div>
-            <div>
+          <div className="flex flex-row items-center gap-2 sm:gap-3">
+            <div className="text-sm sm:text-base">{option.flag}</div>
+            <div className="text-sm sm:text-base">
               {option.label},
               <span className="text-neutral-500 ml-1">{option.region}</span>
             </div>
           </div>
         )}
         classNames={{
-          control: () => "p-3 border-2",
-          input: () => "text-lg",
-          option: () => "text-lg",
+          control: () => "p-2 sm:p-3 border-2",
+          input: () => "text-sm sm:text-lg",
+          option: () => "text-sm sm:text-lg",
         }}
         theme={(theme) => ({
           ...theme,

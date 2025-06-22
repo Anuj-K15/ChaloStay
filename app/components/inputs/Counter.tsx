@@ -29,24 +29,24 @@ const Counter: React.FC<CounterProps> = ({
   return (
     <div className="flex flex-row items-center justify-between">
       <div className="flex flex-col">
-        <div className="font-medium">{title}</div>
-        <div className="font-light text-gray-600">{subtitle}</div>
+        <div className="font-medium text-sm sm:text-base">{title}</div>
+        <div className="font-light text-gray-600 text-xs sm:text-sm">{subtitle}</div>
       </div>
-      <div className="flex flex-row items-center gap-4">
+      <div className="flex flex-row items-center gap-2 sm:gap-4">
         <div
           onClick={onReduce}
-          className="w-10 h-10 rounded-full border-[1px] border-neutral-400 flex items-center justify-center text-neutral-600 cursor-pointer hover:opacity-80 transition"
+          className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-[1px] border-neutral-400 flex items-center justify-center text-neutral-600 cursor-pointer hover:opacity-80 transition"
         >
-          <AiOutlineMinus />
+          <AiOutlineMinus size={16} className="sm:w-5 sm:h-5" />
         </div>
-        <div className="font-light text-xl text-neutral-600">
+        <div className="font-light text-lg sm:text-xl text-neutral-600 w-8 text-center">
             {value}
         </div>
         <div
           onClick={onAdd}
-          className="w-10 h-10 rounded-full border-[1px] border-neutral-400 flex items-center justify-center text-neutral-600 cursor-pointer hover:opacity-80 transition"
+          className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-[1px] border-neutral-400 flex items-center justify-center text-neutral-600 cursor-pointer hover:opacity-80 transition"
         >
-          <AiOutlinePlus />
+          <AiOutlinePlus size={16} className="sm:w-5 sm:h-5" />
         </div>
       </div>
     </div>

@@ -43,13 +43,13 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
   const coordinates = getByValue(locationValue)?.latlng;
 
   return (
-    <div className="col-span-4 flex flex-col gap-8">
+    <div className="col-span-4 flex flex-col gap-4 sm:gap-6 md:gap-8">
       <div className="flex flex-col gap-2">
-        <div className="text-xl font-semibold flex flex-row items-center gap-2">
+        <div className="text-lg sm:text-xl font-semibold flex flex-row items-center gap-2">
           <div>Hosted by {user?.name}</div>
           <Avatar src={user?.image} />
         </div>
-        <div className="flex flex-row items-center gap-4 font-light text-neutrsl-500">
+        <div className="flex flex-row items-center gap-2 sm:gap-4 font-light text-neutrsl-500 text-sm sm:text-base">
           <div>{guestCount} guests</div>
           <div>{roomCount} rooms</div>
           <div>{bathroomCount} bathrooms</div>
@@ -64,7 +64,7 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
         />
       )}
       <hr />
-      <div className="text-lg font-light text-neutral-500">{description}</div>
+      <div className="text-base sm:text-lg font-light text-neutral-500">{description}</div>
       <hr />
       <Map center={coordinates} />
     </div>

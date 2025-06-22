@@ -18,16 +18,19 @@ const Calendar: React.FC<CalendarProps> = ({
     disabledDates
 }) => {
   return (
-    <DateRange 
-        rangeColors={["#262626"]}
-        ranges={[value]}
-        date={new Date()}
-        onChange={onChange}
-        direction="vertical"
-        showDateDisplay={false}
-        minDate={new Date()}
-        disabledDates={disabledDates}
-    />
+    <div className="w-full">
+      <DateRange 
+          rangeColors={["#262626"]}
+          ranges={[value]}
+          date={new Date()}
+          onChange={onChange}
+          direction="vertical"
+          showDateDisplay={false}
+          minDate={new Date()}
+          disabledDates={disabledDates}
+          className="w-full"
+      />
+    </div>
   )
 }
 

@@ -23,3 +23,32 @@ body,
   width: 100% !important;
   font-size: 16px !important;
 }
+
+/* Custom scrollbar for mobile */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 640px) {
+  button, 
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Improve text readability on mobile */
+@media (max-width: 640px) {
+  body {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}

@@ -29,6 +29,15 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
     setIsOpen((value) => !value);
   }, []);
 
+  const handleMenuItemClick = useCallback((callback: () => void) => {
+    return () => {
+      // Close the menu
+      setIsOpen(false);
+      // Execute the provided callback
+      callback();
+    };
+  }, []);
+
   const onRent = useCallback(() => {
     if (!currentUser) {
       return loginModal.onOpen();
@@ -62,32 +71,45 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             {currentUser ? (
               <>
                 <MenuItem
-                  onClick={() => router.push("/trips")}
+                  onClick={handleMenuItemClick(() => router.push("/trips"))}
                   label="My trips"
                 />
                 <MenuItem
-                  onClick={() => router.push("/favorites")}
+                  onClick={handleMenuItemClick(() => router.push("/favorites"))}
                   label="My favorites"
                 />
                 <MenuItem
-                  onClick={() => router.push("/reservations")}
+                  onClick={handleMenuItemClick(() =>
+                    router.push("/reservations")
+                  )}
                   label="My reservations"
                 />
                 <MenuItem
-                  onClick={() => router.push("/properties")}
+                  onClick={handleMenuItemClick(() =>
+                    router.push("/properties")
+                  )}
                   label="My properties"
                 />
                 <MenuItem
-                  onClick={rentModal.onOpen}
+                  onClick={handleMenuItemClick(rentModal.onOpen)}
                   label="ChaloStay my home"
                 />
                 <hr />
-                <MenuItem onClick={() => signOut()} label="Logout" />
+                <MenuItem
+                  onClick={handleMenuItemClick(() => signOut())}
+                  label="Logout"
+                />
               </>
             ) : (
               <>
-                <MenuItem onClick={loginModal.onOpen} label="Login" />
-                <MenuItem onClick={registerModal.onOpen} label="Signup" />
+                <MenuItem
+                  onClick={handleMenuItemClick(loginModal.onOpen)}
+                  label="Login"
+                />
+                <MenuItem
+                  onClick={handleMenuItemClick(registerModal.onOpen)}
+                  label="Signup"
+                />
               </>
             )}
           </div>

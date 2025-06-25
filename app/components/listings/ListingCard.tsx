@@ -82,28 +82,23 @@ const ListingCard: React.FC<ListingCardProps> = ({
                 transition"
           />
           <div className="absolute top-2 right-2 sm:top-3 sm:right-3">
-            <HeartButton 
-                listingId={data.id}
-                currentUser={currentUser}
-            />
+            <HeartButton listingId={data.id} currentUser={currentUser} />
           </div>
         </div>
         <div className="font-semibold text-sm sm:text-lg">
-            {location?.region}, {location?.label}
+          {location?.region}, {location?.label}
         </div>
         <div className="font-light text-neutral-500 text-xs sm:text-sm">
           {reservationDate || data.category}
         </div>
         <div className="flex flex-row items-center gap-1">
-          <div className="font-semibold text-sm sm:text-base">
-            ₹ {price}
-          </div>
+          <div className="font-semibold text-sm sm:text-base">$ {price}</div>
           {!reservation && (
             <div className="font-light text-xs sm:text-sm">night</div>
           )}
         </div>
         {onAction && actionLabel && (
-          <Button 
+          <Button
             disabled={disabled}
             small
             label={actionLabel}

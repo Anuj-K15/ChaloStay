@@ -5,7 +5,7 @@ import {
   FieldValues,
   UseFormRegister,
 } from "react-hook-form";
-import { BiRupee } from "react-icons/bi";
+import { BiDollar } from "react-icons/bi";
 
 interface InputProps {
   id: string;
@@ -31,7 +31,7 @@ const Input: React.FC<InputProps> = ({
   return (
     <div className="w-full relative">
       {formatPrice && (
-        <BiRupee size={20} className="text-neutral-700 absolute top-4 sm:top-5 left-2" />
+        <BiDollar size={20} className="text-neutral-700 absolute top-4 sm:top-5 left-2" />
       )}
       <input
         id={id}

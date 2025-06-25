@@ -10,6 +10,7 @@ interface ButtonProps {
   small?: boolean;
   icon?: IconType;
   fullWidth?: boolean;
+  socialLogin?: boolean;
 }
 const Button: React.FC<ButtonProps> = ({
   label,
@@ -19,6 +20,7 @@ const Button: React.FC<ButtonProps> = ({
   small,
   icon: Icon,
   fullWidth = true,
+  socialLogin = false,
 }) => {
   return (
     <button
@@ -29,21 +31,22 @@ const Button: React.FC<ButtonProps> = ({
         ${outline ? "bg-white" : "bg-rose-500"}
         ${outline ? "border-black" : "border-rose-500"}   
         ${outline ? "text-black" : "text-white"}
-        ${small ? "py-1" : "py-2 sm:py-3"}
-        ${small ? "text-xs sm:text-sm" : "text-sm sm:text-md"}
-        ${small ? "font-light" : "font-semibold"}
-        ${small ? "border-[1px]" : "border-2"}
+        ${small ? "py-1" : "py-1.5 md:py-2"}
+        ${small ? "text-xs" : "text-xs md:text-sm"}
+        ${small ? "font-light" : "font-medium"}
+        ${small ? "border-[1px]" : "border-[1px]"}
+        ${socialLogin && Icon ? "pl-7" : ""}
       `}
     >
       {Icon && (
         <Icon
-          size={20}
-          className="
-                absolute left-2 sm:left-4 top-2 sm:top-3
-                "
+          size={16}
+          className="absolute left-2 top-1/2 transform -translate-y-1/2"
         />
       )}
-      {label}
+      <span className={`${socialLogin && Icon ? "truncate block w-full" : ""}`}>
+        {label}
+      </span>
     </button>
   );
 };

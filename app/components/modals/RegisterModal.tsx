@@ -38,7 +38,7 @@ const RegisterModal = () => {
 
   const image = watch("image");
 
-  const setCustomValue = (id: string, value: any) => {
+  const setCustomValue = (id: string, value: unknown) => {
     setValue(id, value, {
       shouldDirty: true,
       shouldTouch: true,

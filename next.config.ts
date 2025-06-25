@@ -8,9 +8,12 @@ const nextConfig: NextConfig = {
       "avatars.githubusercontent.com",
       "lh3.googleusercontent.com",
       "res.cloudinary.com",
-      
-    ]
-  }
+    ],
+  },
+  // Add webpack configuration to handle Leaflet properly
+  webpack: (config) => {
+    return config;
+  },
 };
 
 export default nextConfig;

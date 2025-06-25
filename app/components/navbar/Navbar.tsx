@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React from "react";
 import Container from "../Container";
@@ -14,18 +14,15 @@ interface NavbarProps {
 }
 // You can replace `any` with a more specific type if you have one for currentUser
 
-const Navbar: React.FC<NavbarProps> = ({
-  currentUser
-}) => {
-  
+const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
   return (
     <div className="fixed w-full bg-white z-10 shadow-sm">
       <div className="py-2 sm:py-4 border-b-[1px]">
         <Container>
-          <div className="flex flex-row items-center justify-between gap-2 sm:gap-3 md:gap-0">
+          <div className="flex flex-row items-center justify-between gap-0.5 sm:gap-3 md:gap-0">
             <Logo />
-            <Search/>
-            <UserMenu currentUser={currentUser}/>
+            <Search />
+            <UserMenu currentUser={currentUser} />
           </div>
         </Container>
       </div>

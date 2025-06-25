@@ -10,12 +10,14 @@ A modern, full-stack vacation rental platform built with Next.js 15, TypeScript,
 ## ✨ Features
 
 ### 🔐 Authentication & User Management
+
 - **NextAuth.js Integration** - Secure authentication with multiple providers
 - **User Registration & Login** - Email/password and OAuth support
 - **Profile Management** - User profiles with customizable information
 - **Session Management** - Persistent user sessions
 
 ### 🏠 Property Listings
+
 - **Property Discovery** - Browse available vacation rentals
 - **Advanced Search** - Filter by location, dates, guests, and amenities
 - **Property Details** - Comprehensive property information with images
@@ -23,17 +25,20 @@ A modern, full-stack vacation rental platform built with Next.js 15, TypeScript,
 - **Location-based Search** - Interactive map integration with Leaflet
 
 ### 📅 Booking System
+
 - **Reservation Management** - Book and manage property reservations
 - **Date Selection** - Interactive calendar for date picking
 - **Pricing Calculator** - Dynamic pricing based on dates and duration
 - **Booking History** - View past and upcoming trips
 
 ### ❤️ Favorites & Wishlists
+
 - **Favorite Properties** - Save properties to personal wishlist
 - **Quick Access** - Easy access to saved properties
 - **Favorites Management** - Add/remove properties from favorites
 
 ### 🎨 User Interface
+
 - **Responsive Design** - Mobile-first approach with Tailwind CSS
 - **Modern UI/UX** - Clean, intuitive interface design
 - **Interactive Maps** - Property location visualization
@@ -41,6 +46,7 @@ A modern, full-stack vacation rental platform built with Next.js 15, TypeScript,
 - **Real-time Notifications** - Toast notifications for user feedback
 
 ### 🔧 Admin Features
+
 - **Property Management** - Host dashboard for managing listings
 - **Reservation Overview** - Track all bookings and reservations
 - **Property Analytics** - View property performance metrics
@@ -48,6 +54,7 @@ A modern, full-stack vacation rental platform built with Next.js 15, TypeScript,
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **Next.js 15** - React framework with App Router
 - **TypeScript** - Type-safe JavaScript
 - **Tailwind CSS** - Utility-first CSS framework
@@ -59,6 +66,7 @@ A modern, full-stack vacation rental platform built with Next.js 15, TypeScript,
 - **React Leaflet** - Interactive maps
 
 ### Backend
+
 - **Next.js API Routes** - Server-side API endpoints
 - **Prisma ORM** - Database toolkit and ORM
 - **MongoDB** - NoSQL database
@@ -66,10 +74,12 @@ A modern, full-stack vacation rental platform built with Next.js 15, TypeScript,
 - **bcrypt** - Password hashing
 
 ### External Services
+
 - **Cloudinary** - Cloud image management
 - **World Countries** - Country data for location selection
 
 ### Development Tools
+
 - **ESLint** - Code linting
 - **PostCSS** - CSS processing
 - **Autoprefixer** - CSS vendor prefixing
@@ -77,7 +87,8 @@ A modern, full-stack vacation rental platform built with Next.js 15, TypeScript,
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - npm or yarn
 - MongoDB database
 - Cloudinary account (for image uploads)
@@ -85,12 +96,14 @@ A modern, full-stack vacation rental platform built with Next.js 15, TypeScript,
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/yourusername/chalostay.git
    cd chalostay
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    # or
@@ -99,20 +112,21 @@ A modern, full-stack vacation rental platform built with Next.js 15, TypeScript,
 
 3. **Environment Setup**
    Create a `.env.local` file in the root directory:
+
    ```env
    # Database
    DATABASE_URL="your_mongodb_connection_string"
-   
+
    # NextAuth
    NEXTAUTH_SECRET="your_nextauth_secret"
    NEXTAUTH_URL="http://localhost:3000"
-   
+
    # OAuth Providers (optional)
    GOOGLE_CLIENT_ID="your_google_client_id"
    GOOGLE_CLIENT_SECRET="your_google_client_secret"
    GITHUB_ID="your_github_client_id"
    GITHUB_SECRET="your_github_client_secret"
-   
+
    # Cloudinary
    CLOUDINARY_CLOUD_NAME="your_cloudinary_cloud_name"
    CLOUDINARY_API_KEY="your_cloudinary_api_key"
@@ -120,15 +134,17 @@ A modern, full-stack vacation rental platform built with Next.js 15, TypeScript,
    ```
 
 4. **Database Setup**
+
    ```bash
    # Generate Prisma client
    npx prisma generate
-   
+
    # Push schema to database
    npx prisma db push
    ```
 
 5. **Run the development server**
+
    ```bash
    npm run dev
    # or
@@ -169,13 +185,16 @@ ChaloStay/
 ## 🌐 Deployment
 
 ### Vercel (Recommended)
+
 1. Push your code to GitHub
 2. Connect your repository to Vercel
 3. Add environment variables in Vercel dashboard
 4. Deploy automatically on push
 
 ### Other Platforms
+
 The application can be deployed to any platform that supports Next.js:
+
 - Netlify
 - Railway
 - DigitalOcean App Platform

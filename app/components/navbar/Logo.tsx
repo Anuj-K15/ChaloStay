@@ -13,7 +13,7 @@ const Logo = () => {
         onClick={() => router.push("/")}
         alt="Logo Only"
         src="/images/logo-only.png"
-        className="block sm:hidden cursor-pointer w-10 h-10"
+        className="block sm:hidden cursor-pointer w-8 h-8"
         width={300}
         height={300}
         priority

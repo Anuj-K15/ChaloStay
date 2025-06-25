@@ -22,7 +22,7 @@ A modern, full-stack vacation rental platform built with Next.js 15, TypeScript,
 - **Advanced Search** - Filter by location, dates, guests, and amenities
 - **Property Details** - Comprehensive property information with images
 - **Category Filtering** - Filter by property types (apartment, villa, etc.)
-- **Location-based Search** - Interactive map integration with Leaflet
+- **Location-based Search** - Interactive map integration with Leaflet.js (with cross-platform map markers)
 
 ### 📅 Booking System
 

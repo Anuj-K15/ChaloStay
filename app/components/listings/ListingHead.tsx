@@ -32,7 +32,7 @@ const ListingHead: React.FC<ListingHeadProps> = ({
         title={title}
         subtitle={`${location?.region}, ${location?.label}`}
       />
-      <div className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] overflow-hidden rounded-xl relative">
+      <div className="w-full h-[40vh] sm:h-[60vh] md:h-[70vh] overflow-hidden rounded-xl relative">
         <Image
           alt="Image"
           src={imageSrc}

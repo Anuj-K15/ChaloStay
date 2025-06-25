@@ -14,8 +14,8 @@ const Logo = () => {
         alt="Logo Only"
         src="/images/logo-only.png"
         className="block sm:hidden cursor-pointer w-10 h-10"
-        width={40}
-        height={40}
+        width={300}
+        height={300}
         priority
       />
       {/* Desktop/Tablet: logo.png */}
@@ -23,9 +23,9 @@ const Logo = () => {
         onClick={() => router.push("/")}
         alt="Logo"
         src="/images/logo.png"
-        className="hidden md:block cursor-pointer"
-        width={150}
-        height={150}
+        className="hidden sm:block cursor-pointer sm:w-auto sm:h-10 md:h-12"
+        width={400}
+        height={400}
         priority
       />
     </>

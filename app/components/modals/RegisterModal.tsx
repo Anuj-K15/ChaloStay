@@ -3,7 +3,7 @@
 import axios from "axios";
 import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
-import { useCallback, useState } from "react";
+import { useCallback, useState, useEffect } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 import useRegisterModal from "@/app/hooks/useRegisterModal";
@@ -27,6 +27,7 @@ const RegisterModal = () => {
     formState: { errors },
     setValue,
     watch,
+    reset,
   } = useForm<FieldValues>({
     defaultValues: {
       name: "",
@@ -53,6 +54,13 @@ const RegisterModal = () => {
       .post("/api/register", data)
       .then(() => {
         toast.success("Success!");
+        // Reset the form including profile image
+        reset({
+          name: "",
+          email: "",
+          password: "",
+          image: "",
+        });
         registerModal.onClose();
         loginModal.onOpen();
       })
@@ -68,6 +76,18 @@ const RegisterModal = () => {
     registerModal.onClose();
     loginModal.onOpen();
   }, [registerModal, loginModal]);
+
+  // Reset the form when the modal is closed
+  useEffect(() => {
+    if (!registerModal.isOpen) {
+      reset({
+        name: "",
+        email: "",
+        password: "",
+        image: "",
+      });
+    }
+  }, [registerModal.isOpen, reset]);
 
   const bodyContent = (
     <div className="flex flex-col gap-2.5 sm:gap-4">

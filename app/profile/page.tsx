@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import { getProfileData } from "@/app/actions/getProfileData";
-import ProfileClient from "./ProfileClient";
+import ProfileClient from "@/app/profile/ProfileClient";
 
 const ProfilePage = async () => {
   const currentUser = await getCurrentUser();

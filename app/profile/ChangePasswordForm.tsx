@@ -29,7 +29,7 @@ const ChangePasswordForm = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     if (data.newPassword !== data.confirmPassword) {
-      toast.error("Passwords don't match");
+      toast.error("Passwords don&apos;t match");
       return;
     }
 
@@ -87,7 +87,7 @@ const ChangePasswordForm = () => {
         required
       />
       {newPassword && confirmPassword && newPassword !== confirmPassword && (
-        <div className="text-rose-500 text-sm">Passwords don't match</div>
+        <div className="text-rose-500 text-sm">Passwords don&apos;t match</div>
       )}
       <div className="mt-2">
         <Button

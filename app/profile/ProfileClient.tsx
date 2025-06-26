@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { SafeUser } from "@/app/types";
 import Container from "@/app/components/Container";
@@ -31,7 +31,6 @@ const ProfileClient: React.FC<ProfileClientProps> = ({
     setValue,
     watch,
     formState: { errors },
-    reset,
   } = useForm<FieldValues>({
     defaultValues: {
       name: profileData?.name || currentUser.name,
@@ -59,7 +58,7 @@ const ProfileClient: React.FC<ProfileClientProps> = ({
         toast.success("Profile updated!");
         router.refresh();
       })
-      .catch((error) => {
+      .catch(() => {
         toast.error("Something went wrong.");
       })
       .finally(() => {
@@ -69,7 +68,7 @@ const ProfileClient: React.FC<ProfileClientProps> = ({
 
   return (
     <Container>
-      <div className="max-w-screen-lg mx-auto mt-4">
+      <div className="max-w-screen-lg mx-auto mt-24 sm:mt-28">
         <div className="flex flex-col gap-6">
           <Heading
             title="Profile"

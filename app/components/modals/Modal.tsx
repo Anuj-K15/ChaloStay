@@ -90,20 +90,37 @@ const Modal: React.FC<ModalProps> = ({
               <div className="relative p-3 sm:p-4 flex-auto">{body}</div>
               {/* Footer */}
               <div className="flex flex-col gap-1.5 sm:gap-2 p-3 sm:p-4 w-full">
-                <div className="flex flex-col items-center gap-2 sm:gap-2.5 w-full mx-auto">
-                  {secondaryAction && secondaryActionLabel && (
-                    <Button
-                      outline
-                      disabled={disabled}
-                      label={secondaryActionLabel}
-                      onClick={handleSecondaryAction}
-                    />
+                <div className="flex flex-row items-center justify-between gap-3 sm:gap-4 w-full mx-auto">
+                  {secondaryAction && secondaryActionLabel ? (
+                    <>
+                      <div className="flex-1">
+                        <Button
+                          fullWidth
+                          outline
+                          disabled={disabled}
+                          label={secondaryActionLabel}
+                          onClick={handleSecondaryAction}
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <Button
+                          fullWidth
+                          disabled={disabled}
+                          label={actionLabel}
+                          onClick={handleSubmit}
+                        />
+                      </div>
+                    </>
+                  ) : (
+                    <div className="w-full">
+                      <Button
+                        fullWidth
+                        disabled={disabled}
+                        label={actionLabel}
+                        onClick={handleSubmit}
+                      />
+                    </div>
                   )}
-                  <Button
-                    disabled={disabled}
-                    label={actionLabel}
-                    onClick={handleSubmit}
-                  />
                 </div>
                 <div className="w-full">{footer}</div>
               </div>

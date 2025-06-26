@@ -1,20 +1,24 @@
 # ChaloStay 🏠
 
-A modern, full-stack vacation rental platform built with Next.js 15, TypeScript, and Prisma. ChaloStay allows users to discover, book, and manage vacation rentals with a beautiful, responsive interface.
+A modern, full-stack vacation rental platform built with Next.js 15, TypeScript, and Prisma. ChaloStay allows users to discover, book, and manage vacation rentals with a beautiful, responsive interface optimized for both desktop and mobile devices.
 
 ![ChaloStay](https://img.shields.io/badge/Next.js-15.3.3-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
 ![Prisma](https://img.shields.io/badge/Prisma-6.9.0-2D3748?style=for-the-badge&logo=prisma)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.2.7-38B2AC?style=for-the-badge&logo=tailwind-css)
+![MongoDB](https://img.shields.io/badge/MongoDB-6.0-47A248?style=for-the-badge&logo=mongodb)
 
 ## ✨ Features
 
 ### 🔐 Authentication & User Management
 
 - **NextAuth.js Integration** - Secure authentication with multiple providers
-- **User Registration & Login** - Email/password and OAuth support
-- **Profile Management** - User profiles with customizable information
-- **Session Management** - Persistent user sessions
+- **User Registration & Login** - Email/password and OAuth support (Google, GitHub)
+- **Enhanced Profile Management** - Full-featured profile page for editing user information
+- **Image Management** - Update and customize profile images with Cloudinary
+- **Password Security** - Secure password change functionality in profile settings
+- **Session Management** - Persistent user sessions with secure state handling
+- **Avatar Integration** - Consistent user avatars across the platform
 
 ### 🏠 Property Listings
 
@@ -39,11 +43,15 @@ A modern, full-stack vacation rental platform built with Next.js 15, TypeScript,
 
 ### 🎨 User Interface
 
-- **Responsive Design** - Mobile-first approach with Tailwind CSS
-- **Modern UI/UX** - Clean, intuitive interface design
-- **Interactive Maps** - Property location visualization
-- **Image Upload** - Cloudinary integration for property images
-- **Real-time Notifications** - Toast notifications for user feedback
+- **Responsive Design** - Mobile-first approach with Tailwind CSS optimized for all devices
+- **Modern UI/UX** - Clean, intuitive interface with enhanced accessibility
+- **Mobile-Optimized Components** - Responsive calendar, search, and navigation
+- **Improved Navbar** - Fixed overlay with proper z-index and responsive menu
+- **Interactive Maps** - Cross-platform map integration with optimized markers
+- **Profile Dashboard** - Dedicated section for managing user information
+- **Image Upload** - Cloudinary integration for property and profile images
+- **Real-time Notifications** - Toast notifications for immediate user feedback
+- **Consistent Styling** - Unified button sizes and layout across the application
 
 ### 🔧 Admin Features
 
@@ -56,33 +64,33 @@ A modern, full-stack vacation rental platform built with Next.js 15, TypeScript,
 ### Frontend
 
 - **Next.js 15** - React framework with App Router
-- **TypeScript** - Type-safe JavaScript
-- **Tailwind CSS** - Utility-first CSS framework
+- **TypeScript** - Type-safe JavaScript with strict type checking
+- **Tailwind CSS** - Utility-first CSS framework for responsive design
 - **React Hook Form** - Form handling and validation
-- **React Icons** - Icon library
-- **React Hot Toast** - Toast notifications
-- **React Date Range** - Date picker component
-- **React Select** - Customizable select component
-- **React Leaflet** - Interactive maps
+- **React Icons** - Comprehensive icon library
+- **React Hot Toast** - Toast notifications for user feedback
+- **React Date Range** - Mobile-responsive date picker component
+- **React Select** - Customizable select component with accessibility features
+- **React Leaflet** - Cross-platform interactive maps with custom markers
 
 ### Backend
 
-- **Next.js API Routes** - Server-side API endpoints
-- **Prisma ORM** - Database toolkit and ORM
-- **MongoDB** - NoSQL database
-- **NextAuth.js** - Authentication solution
-- **bcrypt** - Password hashing
+- **Next.js API Routes** - Server-side API endpoints for secure data operations
+- **Prisma ORM** - Type-safe database toolkit and ORM
+- **MongoDB** - NoSQL database for flexible data storage
+- **NextAuth.js** - Authentication solution with multiple provider support
+- **bcrypt** - Secure password hashing and verification
 
 ### External Services
 
-- **Cloudinary** - Cloud image management
-- **World Countries** - Country data for location selection
+- **Cloudinary** - Cloud image management for property and user photos
+- **World Countries** - Country data for location selection and mapping
 
 ### Development Tools
 
-- **ESLint** - Code linting
-- **PostCSS** - CSS processing
-- **Autoprefixer** - CSS vendor prefixing
+- **ESLint** - Code linting with custom rule configuration
+- **PostCSS** - CSS processing and optimization
+- **Autoprefixer** - CSS vendor prefixing for cross-browser compatibility
 
 ## 🚀 Getting Started
 
@@ -127,7 +135,7 @@ A modern, full-stack vacation rental platform built with Next.js 15, TypeScript,
    GITHUB_ID="your_github_client_id"
    GITHUB_SECRET="your_github_client_secret"
 
-   # Cloudinary
+   # Cloudinary (required for image uploads)
    CLOUDINARY_CLOUD_NAME="your_cloudinary_cloud_name"
    CLOUDINARY_API_KEY="your_cloudinary_api_key"
    CLOUDINARY_API_SECRET="your_cloudinary_api_secret"
@@ -161,13 +169,24 @@ ChaloStay/
 ├── app/                    # Next.js App Router
 │   ├── actions/           # Server actions
 │   ├── api/              # API routes
+│   │   ├── favorites/    # Favorites API routes
+│   │   ├── listings/     # Listings API routes
+│   │   ├── profile/      # Profile management API routes
+│   │   ├── register/     # User registration API routes
+│   │   └── reservations/ # Reservation management API routes
 │   ├── components/       # React components
 │   │   ├── inputs/       # Form input components
 │   │   ├── listings/     # Listing-related components
 │   │   ├── modals/       # Modal components
 │   │   └── navbar/       # Navigation components
+│   ├── favorites/        # Favorites page
 │   ├── hooks/            # Custom React hooks
 │   ├── libs/             # Utility libraries
+│   ├── listings/         # Listing pages
+│   ├── profile/          # User profile management pages
+│   ├── properties/       # Property management pages
+│   ├── reservations/     # Reservation management pages
+│   ├── trips/            # User trips pages
 │   ├── types/            # TypeScript type definitions
 │   └── globals.css       # Global styles
 ├── prisma/               # Database schema and migrations
@@ -181,6 +200,9 @@ ChaloStay/
 - `npm run build` - Build the application for production
 - `npm run start` - Start the production server
 - `npm run lint` - Run ESLint for code linting
+- `npx prisma studio` - Open Prisma Studio to view and edit database data
+- `npx prisma generate` - Generate Prisma client after schema changes
+- `npx prisma db push` - Push schema changes to the database
 
 ## 🌐 Deployment
 
@@ -212,7 +234,31 @@ The application can be deployed to any platform that supports Next.js:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## �️ Recent Improvements
+
+### UI/UX Enhancements
+
+- **Enhanced Mobile Experience** - Optimized calendar, modals, and navigation for smaller screens
+- **Fixed Z-Index Issues** - Properly layered navbar and modal components
+- **Consistent Button Styling** - Standardized button sizes and widths throughout the application
+- **Map Marker Fix** - Cross-platform Leaflet marker icons with Node.js implementation
+- **Content Spacing** - Proper margins to prevent content from appearing behind fixed elements
+
+### New Features
+
+- **Complete Profile Management** - Edit name, email, and profile image
+- **Password Change Functionality** - Secure password updates with confirmation
+- **Enhanced User Menu** - Direct access to profile through dedicated link
+- **Form Improvements** - Consistent validation and reset behavior
+
+### Technical Improvements
+
+- **TypeScript Strictness** - Removed `any` types in favor of proper typing
+- **Build Process Optimization** - Cross-platform build compatibility
+- **Vercel Deployment Fixes** - Resolved build errors for production deployment
+- **ESLint Configuration** - Updated rules for better code quality
+
+## �🙏 Acknowledgments
 
 - [Next.js](https://nextjs.org/) - The React framework
 - [Prisma](https://www.prisma.io/) - Database toolkit

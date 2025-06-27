@@ -23,25 +23,25 @@ const Footer = () => {
             <div className="flex space-x-4 mt-4">
               <Link
                 href="https://instagram.com"
-                className="text-white hover:text-lakeside/80 transition"
+                className="text-white hover:text-rose/80 transition"
               >
                 <FaInstagram size={20} />
               </Link>
               <Link
                 href="https://twitter.com"
-                className="text-white hover:text-lakeside/80 transition"
+                className="text-white hover:text-rose/80 transition"
               >
                 <FaTwitter size={20} />
               </Link>
               <Link
                 href="https://facebook.com"
-                className="text-white hover:text-lakeside/80 transition"
+                className="text-white hover:text-rose/80 transition"
               >
                 <FaFacebook size={20} />
               </Link>
               <Link
                 href="https://linkedin.com"
-                className="text-white hover:text-lakeside/80 transition"
+                className="text-white hover:text-rose/80 transition"
               >
                 <FaLinkedin size={20} />
               </Link>
@@ -54,16 +54,16 @@ const Footer = () => {
               Quick Links
             </h3>
             <ul className="space-y-2 text-gray-300">
-              <li className="hover:text-lakeside/80 transition">
+              <li className="hover:text-rose/80 transition">
                 <Link href="/">Home</Link>
               </li>
-              <li className="hover:text-lakeside/80 transition">
+              <li className="hover:text-rose/80 transition">
                 <Link href="/trips">My Trips</Link>
               </li>
-              <li className="hover:text-lakeside/80 transition">
+              <li className="hover:text-rose/80 transition">
                 <Link href="/favorites">Favorites</Link>
               </li>
-              <li className="hover:text-lakeside/80 transition">
+              <li className="hover:text-rose/80 transition">
                 <Link href="/properties">My Properties</Link>
               </li>
             </ul>
@@ -75,19 +75,19 @@ const Footer = () => {
               Support
             </h3>
             <ul className="space-y-2 text-gray-300">
-              <li className="hover:text-lakeside/80 transition">
+              <li className="hover:text-rose/80 transition">
                 <Link href="/help">Help Center</Link>
               </li>
-              <li className="hover:text-lakeside/80 transition">
+              <li className="hover:text-rose/80 transition">
                 <Link href="/safety">Safety Information</Link>
               </li>
-              <li className="hover:text-lakeside/80 transition">
+              <li className="hover:text-rose/80 transition">
                 <Link href="/cancellation">Cancellation Options</Link>
               </li>
-              <li className="hover:text-lakeside/80 transition">
+              <li className="hover:text-rose/80 transition">
                 <Link href="/covid">COVID-19 Response</Link>
               </li>
-              <li className="hover:text-lakeside/80 transition">
+              <li className="hover:text-rose/80 transition">
                 <Link href="/support-disabled">Accessibility Support</Link>
               </li>
             </ul>
@@ -102,16 +102,16 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MdLocationOn
                   size={20}
-                  className="text-lakeside mt-1 flex-shrink-0"
+                  className="text-rose mt-1 flex-shrink-0"
                 />
                 <span>Airoli, Navi Mumbai, 400708</span>
               </li>
               <li className="flex items-center space-x-3">
-                <MdPhone size={20} className="text-lakeside flex-shrink-0" />
+                <MdPhone size={20} className="text-rose flex-shrink-0" />
                 <span>+91 9876543210</span>
               </li>
               <li className="flex items-center space-x-3">
-                <MdEmail size={20} className="text-lakeside flex-shrink-0" />
+                <MdEmail size={20} className="text-rose flex-shrink-0" />
                 <span>contact@chalostay.com</span>
               </li>
             </ul>
@@ -133,9 +133,9 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Your email address"
-                className="px-4 py-2 rounded-l-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-lakeside w-full sm:w-auto"
+                className="px-4 py-2 rounded-l-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-rose w-full sm:w-auto"
               />
-              <button className="bg-lakeside hover:bg-lakeside transition rounded-r-lg px-4 py-2 text-white font-medium">
+              <button className="bg-rose hover:bg-rose transition rounded-r-lg px-4 py-2 text-white font-medium">
                 Subscribe
               </button>
             </div>
@@ -148,13 +148,13 @@ const Footer = () => {
             © {new Date().getFullYear()} ChaloStay. All rights reserved.
           </p>
           <div className="mt-2 text-xs flex justify-center space-x-4 text-gray-500">
-            <Link href="/terms" className="hover:text-lakeside/80 transition">
+            <Link href="/terms" className="hover:text-rose/80 transition">
               Terms & Conditions
             </Link>
-            <Link href="/privacy" className="hover:text-lakeside/80 transition">
+            <Link href="/privacy" className="hover:text-rose/80 transition">
               Privacy Policy
             </Link>
-            <Link href="/cookies" className="hover:text-lakeside/80 transition">
+            <Link href="/cookies" className="hover:text-rose/80 transition">
               Cookie Policy
             </Link>
           </div>

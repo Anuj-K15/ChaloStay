@@ -27,10 +27,7 @@ const Input: React.FC<InputProps> = ({
   return (
     <div className="w-full relative">
       {formatPrice && (
-        <BiRupee
-          size={18}
-          className="text-neutral-700 absolute top-3 left-2"
-        />
+        <BiRupee size={18} className="text-neutral-700 absolute top-3 left-2" />
       )}
       <input
         id={id}
@@ -50,7 +47,7 @@ const Input: React.FC<InputProps> = ({
         ${formatPrice ? "left-7 sm:left-8" : "left-2.5 sm:left-3.5"} 
         peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 
         peer-focus:-translate-y-3 peer-focus:scale-75 
-        ${errors[id] ? "text-rose-500" : "text-zinc-400"}
+        ${errors[id] ? "text-rose-500-500" : "text-zinc-400"}
         `}
       >
         {label}

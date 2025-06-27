@@ -9,6 +9,7 @@ import RentModal from "./components/modals/RentModal";
 import ToasterProvider from "./providers/ToasterProvider";
 import getCurrentUser from "./actions/getCurrentUser";
 import SearchModal from "./components/modals/SearchModal";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "ChaloStay",
@@ -34,12 +35,10 @@ export default async function RootLayout({
           <RentModal />
           <LoginModal />
           <RegisterModal />
-          <Navbar currentUser={currentUser}/>
+          <Navbar currentUser={currentUser} />
         </ClientOnly>
-        <div className="pb-16 sm:pb-20 pt-20 sm:pt-28">
-          {children}
-        </div>
-        
+        <div className="pb-16 sm:pb-20 pt-20 sm:pt-28">{children}</div>
+        <Footer />
       </body>
     </html>
   );

@@ -134,7 +134,7 @@ const RegisterModal = () => {
           outline
           label="Google"
           icon={FcGoogle}
-          onClick={() => signIn("google")}
+          onClick={() => signIn("Continue with Google")}
           socialLogin
         />
       </div>
@@ -143,7 +143,7 @@ const RegisterModal = () => {
           outline
           label="Github"
           icon={AiFillGithub}
-          onClick={() => signIn("github")}
+          onClick={() => signIn("Continue with Github")}
           socialLogin
         />
       </div>

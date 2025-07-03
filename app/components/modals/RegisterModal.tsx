@@ -132,18 +132,18 @@ const RegisterModal = () => {
       <div className="w-full">
         <Button
           outline
-          label="Google"
+          label="Continue with Google"
           icon={FcGoogle}
-          onClick={() => signIn("Continue with Google")}
+          onClick={() => signIn("google")}
           socialLogin
         />
       </div>
       <div className="w-full">
         <Button
           outline
-          label="Github"
+          label="Continue with Github"
           icon={AiFillGithub}
-          onClick={() => signIn("Continue with Github")}
+          onClick={() => signIn("github")}
           socialLogin
         />
       </div>

@@ -1,3 +1,5 @@
+@import "./animations.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -139,7 +141,6 @@ body,
     width: 28px !important;
     height: 28px !important;
     margin: -5px !important;
-    
   }
   /* Ensure the container has padding to fit the navigation buttons */
   .custom-calendar-responsive .rdrMonthAndYearWrapper {

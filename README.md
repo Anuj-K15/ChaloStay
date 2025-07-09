@@ -33,7 +33,9 @@ A modern, full-stack vacation rental platform built with Next.js 15, TypeScript,
 - **Reservation Management** - Book and manage property reservations
 - **Date Selection** - Interactive calendar for date picking
 - **Pricing Calculator** - Dynamic pricing based on dates and duration
-- **Booking History** - View past and upcoming trips
+- **Booking History** - View past and upcoming trips with status indicators (Upcoming/Ongoing/Completed)
+- **Conditional Cancellation** - Cancel options available until day before check-in
+- **Cancellation Policy** - Dedicated page with detailed guidelines and procedures
 
 ### ❤️ Favorites & Wishlists
 
@@ -187,8 +189,10 @@ ChaloStay/
 │   ├── properties/       # Property management pages
 │   ├── reservations/     # Reservation management pages
 │   ├── trips/            # User trips pages
+│   ├── cancellation/     # Cancellation policy page
 │   ├── types/            # TypeScript type definitions
-│   └── globals.css       # Global styles
+│   ├── globals.css       # Global styles
+│   └── animations.css    # Animation styles
 ├── prisma/               # Database schema and migrations
 ├── public/               # Static assets
 └── middleware.ts         # Next.js middleware

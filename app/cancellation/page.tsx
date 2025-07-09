@@ -111,18 +111,18 @@ const CancellationPage = () => {
                   <li>
                     Navigate to your{" "}
                     <span className="font-medium text-gray-800">Trips</span>{" "}
-                    page if you're a guest, or{" "}
+                    page if you&apos;re a guest, or{" "}
                     <span className="font-medium text-gray-800">
                       Reservations
                     </span>{" "}
-                    page if you're a host.
+                    page if you&apos;re a host.
                   </li>
                   <li>Find the reservation you wish to cancel.</li>
                   <li>
-                    If the reservation is still in "Upcoming" status, you will
-                    see a "Cancel" button.
+                    If the reservation is still in &quot;Upcoming&quot; status, you will
+                    see a &quot;Cancel&quot; button.
                   </li>
-                  <li>Click the "Cancel" button and confirm your decision.</li>
+                  <li>Click the &quot;Cancel&quot; button and confirm your decision.</li>
                   <li>
                     You will receive an email confirmation of your cancellation.
                   </li>
@@ -131,7 +131,7 @@ const CancellationPage = () => {
                 <div className="bg-rose-50 border-l-4 border-rose-500 p-4 my-6">
                   <p className="text-sm text-rose-700">
                     <span className="font-medium">Important:</span> Once a
-                    reservation becomes "Ongoing" (starting on the check-in
+                    reservation becomes &quot;Ongoing&quot; (starting on the check-in
                     date), cancellations are not permitted through our standard
                     process. For extenuating circumstances, please contact our
                     support team directly.

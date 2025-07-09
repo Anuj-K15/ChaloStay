@@ -9,7 +9,7 @@ import { useCallback, useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 import ListingCard from "../components/listings/ListingCard";
-import { isBefore, startOfDay, addDays, isAfter } from "date-fns";
+import { isBefore, startOfDay, addDays } from "date-fns";
 
 interface TripsClientProps {
   reservations: SafeReservation[];
@@ -59,19 +59,11 @@ const TripsClient: React.FC<TripsClientProps> = ({
         {reservations.map((reservation) => {
           // Parse the reservation dates - use startOfDay to remove time component
           const startDate = startOfDay(new Date(reservation.startDate));
-          const endDate = startOfDay(new Date(reservation.endDate));
           const today = startOfDay(new Date());
 
           // Only show cancel button if today is before the day before trip starts
           const dayBeforeTrip = addDays(startDate, -1);
           const canCancel = isBefore(today, dayBeforeTrip);
-
-          // Check if today is the start date or between start and end dates
-          const isOngoing =
-            today.getTime() === startDate.getTime() ||
-            (isAfter(today, startDate) &&
-              (isBefore(today, endDate) ||
-                today.getTime() === endDate.getTime()));
 
           return (
             <ListingCard

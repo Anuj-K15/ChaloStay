@@ -49,7 +49,7 @@ const ReservationsClient: React.FC<ReservationsClientProps> = ({
       <div className="text-gray-500 text-sm mb-4">
         <p className="p-3 bg-gray-50 rounded-md border border-gray-200">
           <span className="font-medium">Note:</span> Cancellation is only
-          allowed until one day before the guest's stay begins. After that, the
+          allowed until one day before the guest&apos;s stay begins. After that, the
           reservation cannot be cancelled.
         </p>
       </div>
